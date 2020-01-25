@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "ES2015",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "outDir": "src/js",
+    "target": "ES2015",
+    "noEmitOnError": true,
+    "strict": true
+  },
+  "include": ["src/ts/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

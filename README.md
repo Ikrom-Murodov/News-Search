@@ -1,4 +1,4 @@
-# Webpack-4. Сборка проекта для JavaScript
+# Webpack-4. Сборка проекта под JavaScript и TypeScript
 
 #### В дальнейшем вы можете настроить данную сборку под себя
 
@@ -8,7 +8,15 @@
 
 [Вот ссылка для скачивание Node.js](https://nodejs.org/ru/)
 
-> После того, как Node установлен, можно приступать к установке зависимостей проекта.
+> После установки NodeJS вы должны установить TypeScript вот команда для установки TypeScript
+
+```npm
+npm install -g typescript
+```
+
+> Более подробно о TypeScript вы можете узнать [здесь](https://www.typescriptlang.org/index.html)
+
+> После того, как Node и TypeScript установлен, можно приступать к установке зависимостей проекта.
 
 > Клонируйте данный репозиторий (git clone <репозиторий>)
 
@@ -24,6 +32,12 @@ https://github.com/Ikrom-Murodov/Webpack-4.git
 
 ```
 npm run dev
+```
+
+#### Команда 'npm run ts-watch' будет следить за изменениями в файлах в папке 'src/ts/\*_/_.ts' c расширениям .ts
+
+```
+npm run ts-watch
 ```
 
 #### Команда 'npm run prod' нужна для сборки проекта на продакшен без лишних файлов, папок и со сжатыми HTML, CSS и JS файлами
