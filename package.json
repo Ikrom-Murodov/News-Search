@@ -1,7 +1,7 @@
 {
-  "name": "project_start",
+  "name": "web-news_search_application",
   "version": "1.0.0",
-  "description": "Сборка проекта на Webpack-4",
+  "description": "Приложение для поиска новостей",
   "main": "src/js/index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.dev.js",

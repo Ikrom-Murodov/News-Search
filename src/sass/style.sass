@@ -1,7 +1,181 @@
-body 
-  margin: 0
+@import 'variables'
+  
+html
+  font-size: 10px
+  width: 100%
+
+body
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+  width: 100%
   padding: 0
+  margin: 0
 
 h1,h2,h3,h4,h5,h6 
   margin: 0
   padding: 0
+
+*
+  box-sizing: border-box
+
+
+// Button-animation
+.animation-button__link 
+  border: $animation-button-link-border-size solid $animation-button-link-border-color
+  font-size: $animation-button-link-font-size
+  color: $animation-button-link-color
+  text-decoration: none
+  text-transform: uppercase
+  width: 100%
+  height: auto
+  display: inline-block
+  text-align: center
+  position: relative
+  transition: .5s
+  overflow: hidden
+  padding: $animation-button-link-padding
+  border-radius: $animation-button-link-border-radius
+  letter-spacing: .1rem
+
+  &::before,
+  &::after 
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background: $animation-button-link-hover-before-after-background-color
+    top: 0
+    left: -100%
+    opacity: .5
+    transition: .3s
+    z-index: -1
+
+  &::after 
+    opacity: 1
+    transition-delay: .2s
+
+  &:hover 
+    color: $animation-button-link-hover-color
+
+  &:hover::before,
+  &:hover::after 
+    left: 0
+// Button-animation //
+
+
+
+//Header Menu
+.menu
+
+  &__wrapper-content
+    width: 100%
+    height: auto
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .1)
+    padding: 1rem
+
+
+  &__title
+    font-size: $menu-title-font-size
+    color: $menu-title-color
+
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 160rem
+    margin: 0 auto
+
+  &__wrapper-hamburger-item
+    display: flex
+    flex-direction: column
+    cursor: pointer
+
+    &:hover .menu__hamburger-item
+      background-color: $menu-hamburger-item-background-color-hover
+
+
+  &__hamburger-item
+    width: 5rem
+    height: .5rem
+    background-color: $menu-hamburger-item-background-color
+    margin: .2rem 0rem
+    transition: background-color .5s
+
+
+.navigation-menu
+
+  &__wrapper-content
+    width: 28rem
+    height: 100%
+    background-color: $navigation-menu-wrapper-content-background-color
+    position: fixed
+    top: 0
+    padding: 1rem
+    left: -28rem
+    transition: left .4s
+    z-index: 1000
+
+  &__wrapper-title
+    text-align: center
+
+  &__title
+    color: $nivigation-menu-title-color
+    font-size: $navigation-menu-title-font-size
+    letter-spacing: .1rem
+
+
+  &__wrapper-link
+    margin-top: 1.5rem
+
+  &__link
+    margin-bottom: 1.5rem
+    border-color: $navigation-menu-link-border-color
+    color: $navigation-menu-link-color
+    padding: 8px 10px 8px 10px
+
+//Header Menu//
+
+.show
+  left: 0
+
+
+
+// Header Navigation
+.header
+
+  &__menu
+
+  &__container
+    width: 100%
+    max-width: 160rem
+    margin: 0 auto
+    padding: 1rem 1rem 0rem 1rem
+
+
+.navigation
+
+  &__title
+    font-size: $navigation-title-font-size
+
+  &__item-link
+    width: auto
+
+  &__item-link
+    margin: 1rem 1rem .5rem 0rem
+
+  &__wrapper-item-link
+    display: flex
+    flex-wrap: wrap
+// Header Navigation //
+@media screen and ( max-width: 1100px )
+  .menu
+    display: block
+
+  .header__container
+    display: none
+
+  .section
+
+    &__container
+      display: flex
+      align-items: center
+      justify-content: center
