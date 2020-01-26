@@ -17,6 +17,14 @@ class Model {
             return articles;
         });
     }
+    newsSearch(text) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield fetch(`https://newsapi.org/v2/everything?q=${text}&apiKey=713381feb32347b99d21c75366519bd3`);
+            const responseJSON = yield response.json();
+            const articles = responseJSON.articles;
+            return articles;
+        });
+    }
 }
 export { Model };
 //# sourceMappingURL=model.js.map

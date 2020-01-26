@@ -15,6 +15,7 @@ class Controller {
     }
     init() {
         this.View.newsHeadlines.addEventListener("click", this.newsHeadingHandler.bind(this));
+        this.View.form.addEventListener("submit", this.formHandler.bind(this));
     }
     newsHeadingHandler(event) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -23,6 +24,20 @@ class Controller {
                 const country = this.View.country.value;
                 const articles = yield this.Model.headlineNewsSearch(newsHeadline, country);
                 this.View.showNews(articles);
+            }
+        });
+    }
+    formHandler(event) {
+        return __awaiter(this, void 0, void 0, function* () {
+            event.preventDefault();
+            const text = this.View.newsSearchText.value;
+            if (text === "") {
+                return;
+            }
+            else {
+                const articles = yield this.Model.newsSearch(text);
+                this.View.showNews(articles);
+                this.View.newsSearchText.value = "";
             }
         });
     }

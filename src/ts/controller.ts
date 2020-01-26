@@ -22,6 +22,7 @@ class Controller {
       "click",
       this.newsHeadingHandler.bind(this)
     );
+    this.View.form.addEventListener("submit", this.formHandler.bind(this));
   }
 
   private async newsHeadingHandler(event: any): Promise<void> {
@@ -33,6 +34,17 @@ class Controller {
         country
       );
       this.View.showNews(articles);
+    }
+  }
+  private async formHandler(event: Event): Promise<void> {
+    event.preventDefault();
+    const text: string = this.View.newsSearchText.value;
+    if (text === "") {
+      return;
+    } else {
+      const articles = await this.Model.newsSearch(text);
+      this.View.showNews(articles);
+      this.View.newsSearchText.value = "";
     }
   }
 }

@@ -31,6 +31,15 @@ class Model {
     const articles: Array<IArticles> = responseJSON.articles;
     return articles;
   }
+
+  public async newsSearch(text: string): Promise<Array<IArticles>> {
+    const response: Response = await fetch(
+      `https://newsapi.org/v2/everything?q=${text}&apiKey=713381feb32347b99d21c75366519bd3`
+    );
+    const responseJSON: IResponseJSON = await response.json();
+    const articles: IArticles[] = responseJSON.articles;
+    return articles;
+  }
 }
 
 export { Model };

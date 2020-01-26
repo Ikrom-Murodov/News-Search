@@ -3,6 +3,8 @@ class View {
         this.newsHeadlines = settings.newsHeadlines;
         this.country = settings.country;
         this.cardContainer = settings.cardContainer;
+        this.form = settings.form;
+        this.newsSearchText = settings.newsSearchText;
     }
     showNews(articles) {
         this.cardContainer.innerText = "";

@@ -13,17 +13,23 @@ interface IView {
   country: HTMLSelectElement;
   newsHeadlines: HTMLDivElement;
   cardContainer: HTMLDivElement;
+  newsSearchText: HTMLInputElement;
+  form: HTMLFormElement;
 }
 
 class View {
   readonly country: HTMLSelectElement;
   readonly newsHeadlines: HTMLDivElement;
+  readonly newsSearchText: HTMLInputElement;
+  readonly form: HTMLFormElement;
   private cardContainer: HTMLDivElement;
 
   constructor(settings: IView) {
     this.newsHeadlines = settings.newsHeadlines;
     this.country = settings.country;
     this.cardContainer = settings.cardContainer;
+    this.form = settings.form;
+    this.newsSearchText = settings.newsSearchText;
   }
 
   public showNews(articles: Array<IArticles>): void {
