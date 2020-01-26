@@ -5,6 +5,9 @@ class View {
         this.cardContainer = settings.cardContainer;
         this.form = settings.form;
         this.newsSearchText = settings.newsSearchText;
+        this.menuNewsHeadlines = settings.menuNewsHeadlines;
+        this.buttonHamburger = settings.buttonHamburger;
+        this.navbarMenu = settings.navbarMenu;
     }
     showNews(articles) {
         this.cardContainer.innerText = "";

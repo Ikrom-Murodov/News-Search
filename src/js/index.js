@@ -8,7 +8,10 @@ const view = new View({
     country: document.querySelector(".form__select-country"),
     cardContainer: document.querySelector(".article__container"),
     newsSearchText: document.querySelector(".form__input-text"),
-    form: document.querySelector(".form")
+    form: document.querySelector(".form"),
+    menuNewsHeadlines: document.querySelector(".navigation-menu__wrapper-link"),
+    buttonHamburger: document.querySelector(".menu__wrapper-hamburger-item"),
+    navbarMenu: document.querySelector(".navigation-menu__wrapper-content")
 });
 const controller = new Controller({
     Model: model,

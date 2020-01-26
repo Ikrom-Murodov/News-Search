@@ -23,10 +23,20 @@ class Controller {
       this.newsHeadingHandler.bind(this)
     );
     this.View.form.addEventListener("submit", this.formHandler.bind(this));
+    this.View.menuNewsHeadlines.addEventListener(
+      "click",
+      this.newsHeadingHandler.bind(this)
+    );
+    this.View.buttonHamburger.addEventListener(
+      "click",
+      this.navigationMenuHandler.bind(this)
+    );
   }
 
   private async newsHeadingHandler(event: any): Promise<void> {
     if (event.target.tagName === "A") {
+      this.navigationMenuHandler(event);
+
       const newsHeadline: string = event.target.getAttribute("data-news");
       const country: string = this.View.country.value;
       const articles = await this.Model.headlineNewsSearch(
@@ -46,6 +56,10 @@ class Controller {
       this.View.showNews(articles);
       this.View.newsSearchText.value = "";
     }
+  }
+
+  navigationMenuHandler(event: Event): void {
+    this.View.navbarMenu.classList.toggle("show");
   }
 }
 

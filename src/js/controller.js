@@ -16,10 +16,13 @@ class Controller {
     init() {
         this.View.newsHeadlines.addEventListener("click", this.newsHeadingHandler.bind(this));
         this.View.form.addEventListener("submit", this.formHandler.bind(this));
+        this.View.menuNewsHeadlines.addEventListener("click", this.newsHeadingHandler.bind(this));
+        this.View.buttonHamburger.addEventListener("click", this.navigationMenuHandler.bind(this));
     }
     newsHeadingHandler(event) {
         return __awaiter(this, void 0, void 0, function* () {
             if (event.target.tagName === "A") {
+                this.navigationMenuHandler(event);
                 const newsHeadline = event.target.getAttribute("data-news");
                 const country = this.View.country.value;
                 const articles = yield this.Model.headlineNewsSearch(newsHeadline, country);
@@ -40,6 +43,9 @@ class Controller {
                 this.View.newsSearchText.value = "";
             }
         });
+    }
+    navigationMenuHandler(event) {
+        this.View.navbarMenu.classList.toggle("show");
     }
 }
 export { Controller };

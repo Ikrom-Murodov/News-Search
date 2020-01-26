@@ -15,6 +15,9 @@ interface IView {
   cardContainer: HTMLDivElement;
   newsSearchText: HTMLInputElement;
   form: HTMLFormElement;
+  menuNewsHeadlines: HTMLDivElement;
+  buttonHamburger: HTMLDivElement;
+  navbarMenu: HTMLDivElement;
 }
 
 class View {
@@ -22,6 +25,9 @@ class View {
   readonly newsHeadlines: HTMLDivElement;
   readonly newsSearchText: HTMLInputElement;
   readonly form: HTMLFormElement;
+  readonly menuNewsHeadlines: HTMLDivElement;
+  readonly buttonHamburger: HTMLDivElement;
+  readonly navbarMenu: HTMLDivElement;
   private cardContainer: HTMLDivElement;
 
   constructor(settings: IView) {
@@ -30,6 +36,9 @@ class View {
     this.cardContainer = settings.cardContainer;
     this.form = settings.form;
     this.newsSearchText = settings.newsSearchText;
+    this.menuNewsHeadlines = settings.menuNewsHeadlines;
+    this.buttonHamburger = settings.buttonHamburger;
+    this.navbarMenu = settings.navbarMenu;
   }
 
   public showNews(articles: Array<IArticles>): void {
