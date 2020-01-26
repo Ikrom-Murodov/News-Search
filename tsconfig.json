@@ -7,7 +7,6 @@
     "outDir": "src/js",
     "target": "ES2015",
     "noEmitOnError": true,
-    "strict": true
   },
   "include": ["src/ts/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
