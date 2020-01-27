@@ -26,7 +26,7 @@ const WebpackConfigProd = WebpackMerge(WebpackConfigBase, {
         collapseWhitespace: true,
         removeComments: true
       }
-    }),
+    })
   ]
 });
 

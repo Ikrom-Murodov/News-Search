@@ -48,7 +48,8 @@ $RECYCLE.BIN/
 *_LOCAL_*.txt
 *_REMOTE_*.txt
 
-
+src/**/*.js
+src/**/*.map
 node_modules
 build
 public
