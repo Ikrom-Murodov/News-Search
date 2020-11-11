@@ -1,51 +1,47 @@
-# Приложение для поиска новостей.
+# News search application.
 
-#### Данное приложение написано на следующих языках. JavaScript(TypeScript), Css(Sass) и Html5 для сборки проекта используется webpack версии 4. Также используется шаблон проектирование MVC
 
-### Вы можете посмотреть на проект прямо сейчас.
+#### This application is written in the following languages. JavaScript (TypeScript), Css (Sass) and Html5. Webpack version 4 is used to build the project. Also the MVC design pattern is used.
 
-[Вот ссылка для просмотра](https://ikrom-murodov.github.io/News-Search.github.io)
 
-### Инструкция для запуска проекта.
+### Instructions for starting the project.
 
-> у вас должен быть установлен Node.js. Установка Node.js для различных платформ довольно простая - скачиваете инсталлер Node для своей операционной системы и устанавливаете. Я рекомендую устанавливать последнюю версию Stable.
+> You must have Node.js installed
 
-[Вот ссылка для скачивание Node.js](https://nodejs.org/ru/).
+[Node.js](https://nodejs.org/ru/).
 
-> После установки NodeJS вы должны установить TypeScript вот команда для установки TypeScript.
+> After installing NodeJS, you must install TypeScript
 
 ```npm
-npm install -g typescript.
+npm install -g typescript
+or
+npm install -D typescript
 ```
 
-> Более подробно о TypeScript вы можете узнать [здесь](https://www.typescriptlang.org/index.html).
+> Once Node and TypeScript are installed, you can start installing project dependencies.
 
-> После того, как Node и TypeScript установлен, можно приступать к установке зависимостей проекта.
 
-> Клонируйте данный репозиторий (git clone <репозиторий>).
+> Clone this repository.
 
 ```npm
 https://github.com/Ikrom-Murodov/News-Search.git.
 ```
 
-> Запустить команду 'npm i' в корне проекта в терминале. Данная команда установит все пакеты, которые указанны в файле package.json, а также все их зависимости.
+> Run the 'npm i' command in the project root in the terminal.
 
-> После того как вы все установили то можете приступить к работе.
+> After you have installed everything, you can get to work.
 
-#### Команда 'npm run dev' запустить веб-сервер и автоматически будет перезагружать страницу в браузере при сохранении кода, и будет следить за изменениями в файлах проекта.
-
+####  The 'npm run dev' command will start the web server and will automatically reload the page in the browser when the code is saved, and will monitor the changes in the project files.
 ```
 npm run dev.
 ```
 
-#### Команда 'npm run ts-watch' будет следить за изменениями в файлах в папке 'src/ts/\*_/_.ts' c расширениям .ts.
-
+####  The 'npm run ts-watch' command will watch for changes in files in the 'src / ts / \ * _ / _. Ts' folder with .ts extensions.
 ```
 npm run ts-watch.
 ```
 
-#### Команда 'npm run prod' нужна для сборки проекта на продакшен без лишних файлов, папок и со сжатыми HTML, CSS и JS файлами.
-
+#### The 'npm run prod' command is needed to build a project for production without unnecessary files, folders and with compressed HTML, CSS and JS files.
 ```
 npm run prod.
 ```
